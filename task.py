@@ -18,7 +18,7 @@ celery = Celery('task',broker=CELERY_BROKER_BACKEND, backend=result_backend)
 
 
 @celery.task(bind=True)
-def salvar_ig():
+def salvar_ig(self):
     import os
 
     # from selenium.webdriver.common.keys import Keys
