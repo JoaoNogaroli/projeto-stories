@@ -14,8 +14,10 @@ import sqlalchemy
 import time
 import re
 
+celery = Celery('task',broker=CELERY_BROKER_BACKEND, backend=result_backend)
 
-@celery.task(bind=Trye)
+
+@celery.task(bind=True)
 def salvar_ig():
     import os
 
