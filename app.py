@@ -16,7 +16,7 @@ def index():
 def func_salvar():
     url = request.form['url']
     time.sleep(1)
-    task = salvar_ig.delay()
+    task = salvar_ig.delay(url)
     time.sleep(2)
     task_id = task.id
     return render_template("save.html", url = url, frase = "Video_IG.mp4", id= task_id)
