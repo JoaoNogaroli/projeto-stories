@@ -41,13 +41,12 @@ def salvar_ig(self,url):
     #driver = webdriver.Chrome(executable_path=r"C:\\Users\\joaon\\Desktop\\selenium-webdriver\\chromedriver", chrome_options=chrome_options) #, chrome_options=chrome_options
     driver.get(url)
     import time
-    SCROLL_PAUSE_TIME = 4
     # Get scroll height
-    time.sleep(SCROLL_PAUSE_TIME)
+    time.sleep(7)
     #--------------       INICIANDO => REPRODUZIR O Stories======
     btn = driver.find_element_by_xpath("/html/body/div[1]/section/div[1]/div/section/div/div[1]/div/div/div/div[3]/button")
     btn.click()
-    time.sleep(1)
+    time.sleep(5)
     ### ENCERRANDO REPRODUÇÂO DO Stories
     ##--------------       INICIANDO BUSCAR O SRC DO VIDEO
     src_cru_video = driver.find_element_by_xpath("//video[@class='y-yJ5  OFkrO ']")
